@@ -7,8 +7,8 @@ License:	GPL
 Group:		Networking/Utilities
 Source0:	http://www.linux.it/~md/software/%{name}_%{version}.tar.gz
 Patch0:		%{name}-Makefile.patch
-BuildRequires:	perl
 BuildRequires:	gettext-devel
+BuildRequires:	perl
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -27,7 +27,9 @@ automatycznie dobiera poprawny serwer whois dla wiêkszosci zapytañ.
 %patch -p1
 
 %build
-%{__make} OPTS="%{rpmcflags} -DHAVE_GETADDRINFO=1"
+%{__make} \
+	CC="%{__cc}" \
+	OPTS="%{rpmcflags} -DHAVE_GETADDRINFO=1"
 
 %install
 rm -rf $RPM_BUILD_ROOT
