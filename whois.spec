@@ -3,14 +3,13 @@ Summary(pl):	Rozszerzony klient WHOIS
 Summary(ru):	Улучшенный клиент WHOIS
 Summary(uk):	Покращений кл╕╓нт WHOIS
 Name:		whois
-Version:	4.6.6
-Release:	2
+Version:	4.6.7
+Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://www.linux.it/~md/software/%{name}_%{version}.tar.gz
-# Source0-md5:	eceebd6e1aaa82b376eee30f59032662
+# Source0-md5:	36929e69816f0d9a938057c700fdfbc6
 Patch0:		%{name}-Makefile.patch
-Patch1:		%{name}-overflow.patch
 URL:		http://www.linux.it/~md/software/
 BuildRequires:	gettext-devel
 BuildRequires:	%{_bindir}/perl
@@ -41,7 +40,6 @@ wiЙkszosci zapytaЯ.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 %build
 %{__make} \
