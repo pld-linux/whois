@@ -4,7 +4,7 @@ Summary(ru):	Улучшенный клиент WHOIS
 Summary(uk):	Покращений кл╕╓нт WHOIS
 Name:		whois
 Version:	4.6.25
-Release:	2
+Release:	3
 License:	GPL
 Group:		Networking/Utilities
 #Source0:	http://www.linux.it/~md/software/%{name}_%{version}.tar.gz
@@ -55,6 +55,9 @@ mv -f po/{no,nb}.po
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_sysconfdir}
+
+install whois.conf $RPM_BUILD_ROOT%{_sysconfdir}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -68,4 +71,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README debian/changelog
 %attr(755,root,root) %{_bindir}/*
+%config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/whois.conf
 %{_mandir}/man1/*
