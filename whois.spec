@@ -7,7 +7,7 @@ Group:		Networking/Utilities
 Group(pl):	Sieciowe/Narzêdzia
 Source:		http://www.linux.it/~md/software/whois_%{version}.tar.gz
 Patch:		whois-Makefile.patch
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This is a new whois (RFC 954) client rewritten from scratch by me.                   
