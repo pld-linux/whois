@@ -6,6 +6,7 @@ Copyright:	GPL
 Group:		Networking/Utilities
 Group(pl):	Sieciowe/Narzêdzia
 Source:		http://www.linux.it/~md/software/whois_%{version}.tar.gz
+Patch:		whois-Makefile.patch
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -17,31 +18,26 @@ server for most queries.
                                                                                     
 %prep
 %setup -q 
+%patch -p1
 
 %build
-make \
-	OPTS="$RPM_OPTS_FLAGS" \
-	LDFLAGS="-s"
-	
+make OPTS="$RPM_OPTS_FLAGS" LDFLAGS="-s"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
-
-install -m755 whois  $RPM_BUILD_ROOT%{_bindir}
-install whois.1 $RPM_BUILD_ROOT%{_mandir}/man1
+make install DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9fn $RPM_BUILD_ROOT%{_mandir}/man1/* \
 	README TODO
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc {README,TODO}.gz
-
 %attr(755,root,root) %{_bindir}/*
-
 %{_mandir}/man1/*
