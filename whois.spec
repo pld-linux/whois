@@ -1,13 +1,16 @@
-Summary:	whois client program 
-Summary(pl):	klient us³ugi whois 
+Summary:	whois client program
+Summary(pl):	klient us³ugi whois
 Name:		whois
 Version:	4.5.15
-Release:	1
+Release:	2
 License:	GPL
 Group:		Networking/Utilities
+Group(de):	Netzwerkwesen/Werkzeuge
+Group(es):	Red/Utilitarios
 Group(pl):	Sieciowe/Narzêdzia
+Group(pt_BR):	Rede/Utilitários
 Source0:	http://www.linux.it/~md/software/%{name}_%{version}.tar.gz
-Patch0:		whois-Makefile.patch
+Patch0:		%{name}-Makefile.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
