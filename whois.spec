@@ -10,6 +10,7 @@ Group:		Networking/Utilities
 Source0:	http://www.linux.it/~md/software/%{name}_%{version}.tar.gz
 # Source0-md5:	95433e62bb69e00afbcc71dd4b4992e8
 Patch0:		%{name}-Makefile.patch
+Patch1:		%{name}-pl.po-update.patch
 URL:		http://www.linux.it/~md/software/
 BuildRequires:	gettext-devel
 BuildRequires:	%{_bindir}/perl
@@ -40,6 +41,7 @@ wiêkszosci zapytañ.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__make} \
