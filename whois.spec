@@ -4,12 +4,13 @@ Summary(ru):	Улучшенный клиент WHOIS
 Summary(uk):	Покращений кл╕╓нт WHOIS
 Name:		whois
 Version:	4.6.6
-Release:	1
+Release:	2
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://www.linux.it/~md/software/%{name}_%{version}.tar.gz
 # Source0-md5:	eceebd6e1aaa82b376eee30f59032662
 Patch0:		%{name}-Makefile.patch
+Patch1:		%{name}-overflow.patch
 URL:		http://www.linux.it/~md/software/
 BuildRequires:	gettext-devel
 BuildRequires:	%{_bindir}/perl
@@ -40,6 +41,7 @@ wiЙkszosci zapytaЯ.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__make} \
@@ -49,7 +51,8 @@ wiЙkszosci zapytaЯ.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install 
+	DESTDIR=$RPM_BUILD_ROOT
 
 %find_lang %{name}
 
