@@ -1,6 +1,6 @@
 Summary:	whois client program 
 Name:		whois
-Version:	4.4.4
+Version:	4.4.5
 Release:	1
 Copyright:	GPL
 Group:		Networking/Utilities
