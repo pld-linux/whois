@@ -1,12 +1,12 @@
 Summary:	whois client program 
 Summary(pl):	klient us³ugi whois 
 Name:		whois
-Version:	4.5.6
+Version:	4.5.8
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Group(pl):	Sieciowe/Narzêdzia
-Source0:	http://www.linux.it/~md/software/%{name}_%{version}.tar.gz
+Source0:	http://www.linux.it/~md/software/whois_4.5.8.tar.gz	
 Patch0:		whois-Makefile.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
