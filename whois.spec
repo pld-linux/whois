@@ -14,7 +14,6 @@ Patch0:		%{name}-Makefile.patch
 URL:		http://www.linux.it/~md/software/
 BuildRequires:	gettext-devel
 BuildRequires:	libidn-devel
-BuildRequires:	perl-base
 Obsoletes:	inetutils-whois
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
