@@ -8,6 +8,7 @@ Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://www.linux.it/~md/software/%{name}_%{version}.tar.gz
+# Source0-md5:	2341ab2c39113d112d13ae34da85b7f6
 Patch0:		%{name}-Makefile.patch
 Patch1:		%{name}-pl.po-update.patch
 URL:		http://www.linux.it/~md/software/
