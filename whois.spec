@@ -1,5 +1,7 @@
 Summary:	Enhanced WHOIS client
 Summary(pl):	Rozszerzony klient WHOIS
+Summary(ru):	Улучшенный клиент WHOIS
+Summary(uk):	Покращений кл╕╓нт WHOIS
 Name:		whois
 Version:	4.5.29
 Release:	1
@@ -22,6 +24,16 @@ appropriate whois server for most queries.
 To jest nowy klient usЁugi whois*RFC 954) napisany caЁkowicie od nowa.
 Jest kompatybilny zarСwno z whois z BSD oraz RIPE. Jest inteligentny i
 automatycznie dobiera poprawny serwer whois dla wiЙkszosci zapytaЯ.
+
+%description -l ru
+Это написанный с "нуля" клиент (RFC 954), совместимый с whois(1)
+программами BSD и RIPE. В большинстве случаев он может автоматически
+выбирать правильный whois сервер в зависимости от запроса.
+
+%description -l uk
+Це заново написаний кл╕╓нт whois (RFC 954), сум╕сний з whois(1)
+програмами BSD та RIPE. В╕н в б╕льшост╕ випадк╕в може автоматично
+вибирати правильний whois сервер в залежност╕ в╕д запиту.
 
 %prep
 %setup -q
