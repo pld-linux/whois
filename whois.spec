@@ -1,7 +1,7 @@
 Summary:	Enhanced WHOIS client
 Summary(pl):	Rozszerzony klient WHOIS
 Name:		whois
-Version:	4.5.25
+Version:	4.5.26
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
