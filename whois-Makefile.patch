@@ -1,14 +1,14 @@
---- whois-4.5.31/Makefile.orig	Fri Oct 11 12:13:59 2002
-+++ whois-4.5.31/Makefile	Wed Oct 16 12:49:37 2002
+--- whois-4.6.9/Makefile.orig	2003-12-01 18:03:18.000000000 +0000
++++ whois-4.6.9/Makefile	2003-12-02 15:48:05.000000000 +0000
 @@ -1,4 +1,6 @@
--prefix=/usr/local
-+prefix=/usr
+-prefix ?= /usr/local
++prefix ?=/usr
 +bindir=$(prefix)/bin
 +mandir=/usr/share/man
  
  OPTS=-O2
  
-@@ -33,12 +35,12 @@
+@@ -38,12 +40,12 @@
  	perl make_tld_serv.pl < tld_serv_list > tld_serv.h
  
  install: whois
@@ -25,13 +25,14 @@
  distclean: clean
  	rm -f po/whois.pot
  
-diff -Nru whois-4.4.5/po/Makefile whois-4.4.5.new/po/Makefile
---- whois-4.4.5/po/Makefile     Sat Dec 18 20:49:31 1999
-+++ whois-4.4.5.new/po/Makefile Thu Dec 30 21:31:15 1999
+
+diff -Nru whois-4.6.9/po/Makefile whois-4.6.9.new/po/Makefile
+--- whois-4.6.9/po/Makefile	2003-06-15 16:46:16.000000000 +0000
++++ whois-4.6.9.new/po/Makefile	2003-12-02 15:55:37.000000000 +0000
 @@ -1,5 +1,5 @@
  INSTALL= /usr/bin/install -c
 -INSTALLNLSDIR=$(BASEDIR)/usr/share/locale
 +INSTALLNLSDIR=$(DESTDIR)/usr/share/locale
-
+ 
  PACKAGE = whois
-
+ 
