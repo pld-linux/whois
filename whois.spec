@@ -3,20 +3,20 @@ Summary(pl):	Rozszerzony klient WHOIS
 Summary(ru):	Улучшенный клиент WHOIS
 Summary(uk):	Покращений кл╕╓нт WHOIS
 Name:		whois
-Version:	4.6.22
-Release:	2
+Version:	4.6.23
+Release:	1
 License:	GPL
 Group:		Networking/Utilities
 #Source0:	http://www.linux.it/~md/software/%{name}_%{version}.tar.gz
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.gz
-# Source0-md5:	b509d55935946b443fc6481f04bc8314
+# Source0-md5:	4bc36d4263c735fa9db19d9d2e2c8498
 Patch0:		%{name}-Makefile.patch
 URL:		http://www.linux.it/~md/software/
 BuildRequires:	gettext-devel
 BuildRequires:	libidn-devel
 BuildRequires:	%{_bindir}/perl
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	inetutils-whois
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This is a new whois (RFC 954) client rewritten from scratch. It is
