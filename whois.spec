@@ -1,7 +1,7 @@
 Summary:	Enhanced WHOIS client
 Summary(pl):	Rozszerzony klient WHOIS
 Name:		whois
-Version:	4.5.28
+Version:	4.5.29
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
@@ -25,7 +25,7 @@ automatycznie dobiera poprawny serwer whois dla wiêkszosci zapytañ.
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
 
 %build
 %{__make} \
