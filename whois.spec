@@ -3,13 +3,13 @@ Summary(pl):	Rozszerzony klient WHOIS
 Summary(ru):	Улучшенный клиент WHOIS
 Summary(uk):	Покращений кл╕╓нт WHOIS
 Name:		whois
-Version:	4.6.11
+Version:	4.6.12
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
 #Source0:	http://www.linux.it/~md/software/%{name}_%{version}.tar.gz
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.gz
-# Source0-md5:	beb48ed9877caa313d46d08104c642bf
+# Source0-md5:	d39750e17d49e379d2e1594533381885
 Patch0:		%{name}-Makefile.patch
 Patch1:		%{name}-pl.po-update.patch
 URL:		http://www.linux.it/~md/software/
