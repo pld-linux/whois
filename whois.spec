@@ -1,7 +1,8 @@
 Summary:	whois client program 
+Summary(pl):	klient us³ugi whois 
 Name:		whois
-Version:	4.4.7
-Release:	2
+Version:	4.5.2
+Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Group(pl):	Sieciowe/Narzêdzia
@@ -15,21 +16,24 @@ is derived from and compatible with the usual BSD and RIPE whois(1)
 programs. It is intelligent and can automatically select the
 appropriate whois server for most queries.
 
+%description -l pl
+To jest nowy klient us³ugi whois*RFC 954) napisany ca³kowicie od nowa.
+Jest kompatybilny zarówno z whois z BSD oraz RIPE. Jest inteligentny i
+automatycznie dobiera poprawny serwer whois dla wiêkszosci zapytañ.
 
 %prep
 %setup -q 
 %patch -p1
 
 %build
-%{__make} OPTS="$RPM_OPTS_FLAGS" LDFLAGS="-s"
+%{__make} OPTS="%{?debug:-O -g}%{!?debug:$RPM_OPT_FLAGS}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	README TODO
+gzip -9nf README TODO
 
 %find_lang %{name}
 
