@@ -21,12 +21,12 @@ appropriate whois server for most queries.
 %patch -p1
 
 %build
-make OPTS="$RPM_OPTS_FLAGS" LDFLAGS="-s"
+%{__make} OPTS="$RPM_OPTS_FLAGS" LDFLAGS="-s"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
 	README TODO
