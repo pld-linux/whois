@@ -12,7 +12,7 @@ Patch0:		%{name}-Makefile.patch
 Patch1:		%{name}-pl.po-update.patch
 URL:		http://www.linux.it/~md/software/
 BuildRequires:	gettext-devel
-BuildRequires:	perl
+BuildRequires:	%{_bindir}/perl
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
