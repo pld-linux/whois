@@ -1,7 +1,7 @@
 Summary:	whois client program 
 Summary(pl):	klient us³ugi whois 
 Name:		whois
-Version:	4.5.2
+Version:	4.5.4
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
