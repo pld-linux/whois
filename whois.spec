@@ -1,7 +1,7 @@
 Summary:	whois client program 
 Name:		whois
 Version:	4.4.7
-Release:	1
+Release:	2
 License:	GPL
 Group:		Networking/Utilities
 Group(pl):	Sieciowe/Narzêdzia
