@@ -3,7 +3,7 @@ Summary(pl):	Rozszerzony klient WHOIS
 Summary(ru):	Улучшенный клиент WHOIS
 Summary(uk):	Покращений кл╕╓нт WHOIS
 Name:		whois
-Version:	4.5.29
+Version:	4.5.31
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
