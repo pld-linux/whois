@@ -71,5 +71,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README debian/changelog
 %attr(755,root,root) %{_bindir}/*
-%config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/whois.conf
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/whois.conf
 %{_mandir}/man1/*
