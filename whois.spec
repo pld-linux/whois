@@ -1,7 +1,7 @@
 Summary:	whois client program 
 Summary(pl):	klient us³ugi whois 
 Name:		whois
-Version:	4.5.4
+Version:	4.5.6
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
@@ -26,7 +26,7 @@ automatycznie dobiera poprawny serwer whois dla wiêkszosci zapytañ.
 %patch -p1
 
 %build
-%{__make} OPTS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}"
+%{__make} OPTS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
