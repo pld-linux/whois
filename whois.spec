@@ -4,7 +4,7 @@ Summary(ru):	Улучшенный клиент WHOIS
 Summary(uk):	Покращений кл╕╓нт WHOIS
 Name:		whois
 Version:	4.6.22
-Release:	1
+Release:	2
 License:	GPL
 Group:		Networking/Utilities
 #Source0:	http://www.linux.it/~md/software/%{name}_%{version}.tar.gz
@@ -16,6 +16,7 @@ BuildRequires:	gettext-devel
 BuildRequires:	libidn-devel
 BuildRequires:	%{_bindir}/perl
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Obsoletes:	inetutils-whois
 
 %description
 This is a new whois (RFC 954) client rewritten from scratch. It is
