@@ -26,7 +26,7 @@ automatycznie dobiera poprawny serwer whois dla wiêkszosci zapytañ.
 %patch -p1
 
 %build
-%{__make} OPTS="%{?debug:-O -g}%{!?debug:$RPM_OPT_FLAGS}"
+%{__make} OPTS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
