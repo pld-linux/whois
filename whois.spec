@@ -1,8 +1,8 @@
-Summary:	whois client program
-Summary(pl):	klient us³ugi whois
+Summary:	Enhanced WHOIS client
+Summary(pl):	Rozszerzony klient WHOIS
 Name:		whois
-Version:	4.5.15
-Release:	2
+Version:	4.5.19
+Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Group(de):	Netzwerkwesen/Werkzeuge
