@@ -21,7 +21,7 @@ Jest kompatybilny zarówno z whois z BSD oraz RIPE. Jest inteligentny i
 automatycznie dobiera poprawny serwer whois dla wiêkszosci zapytañ.
 
 %prep
-%setup -q 
+%setup -q
 %patch -p1
 
 %build
