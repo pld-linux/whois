@@ -1,14 +1,30 @@
---- whois-4.6.3/po/pl.po.orig	Sun Mar 16 15:37:41 2003
-+++ whois-4.6.3/po/pl.po	Thu Apr 17 23:58:19 2003
-@@ -1,5 +1,7 @@
+--- whois-4.6.3/po/pl.po.orig	2003-03-16 15:37:41.000000000 +0100
++++ whois-4.6.3/po/pl.po	2003-04-18 22:14:42.000000000 +0200
+@@ -1,15 +1,17 @@
  # cokolwi3k. whois.pot.
- # Micha³ 'CeFeK' Nazarewicz
+-# Micha³ 'CeFeK' Nazarewicz
++# Micha³ 'CeFeK' Nazarewicz <cefek@career.pl>, 1999
++# Przemys³aw Knycz <djrzulf@pld.org.pl>, 2003
 +# Jakub Bogusz <qboosh@pld.org.pl>, 2003
-+# Przemys³aw Knycz <djrzulf@pld.org.pl, 2003
  #
  # BUG: xxx
  #
-@@ -21,30 +23,33 @@
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: whois 4.4.5\n"
+-"POT-Creation-Date: 2003-03-16 15:37+0100\n"
+-"PO-Revision-Date: 1999-12-18 14:00:00\n"
+-"Last-Translator: Micha³ 'CeFeK' Nazarewicz <cefek@career.pl>\n"
+-"Language-Team: Polish <pl@li.org>\n"
++"Project-Id-Version: whois 4.6.3\n"
++"POT-Creation-Date: 2003-04-18 22:07+0200\n"
++"PO-Revision-Date: 2003-04-18 22:14+0200\n"
++"Last-Translator: Jakub Bogusz <qboosh@pld.org.pl>\n"
++"Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=iso-8859-2\n"
+ "Content-Transfer-Encoding: 8bit\n"
+@@ -21,66 +23,65 @@
  "\n"
  "Report bugs to %s.\n"
  msgstr ""
@@ -34,41 +50,47 @@
 +msgstr "Ta g³ówna domena nie ma serwera whois, ale mo¿na u¿yæ bazy danych whois pod"
  
  #: ../whois.c:181
- #, fuzzy
+-#, fuzzy
  msgid "This TLD has no whois server."
 -msgstr "Nie ma serwera whois dla tej domeny."
 +msgstr "Ta g³ówna domena nie ma serwera whois."
  
  #: ../whois.c:185
- #, fuzzy
+-#, fuzzy
  msgid "Connecting to whois.crsnic.net."
 -msgstr "£±czenie z hostem whois.internic.net."
 +msgstr "£±czenie z whois.crsnic.net."
  
  #: ../whois.c:191
- #, fuzzy, c-format
-@@ -54,13 +59,13 @@
+-#, fuzzy, c-format
++#, c-format
+ msgid ""
+ "\n"
+ "Found a referral to %s.\n"
  "\n"
  msgstr ""
  "\n"
 -"Znaleziono odniesienie z InterNIC do %s.\n"
-+"Znaleziono odniesienie z crsnic do %s.\n"
++"Znaleziono odniesienie do %s.\n"
  "\n"
  
  #: ../whois.c:196
- #, fuzzy
+-#, fuzzy
  msgid "Connecting to whois.publicinterestregistry.net."
 -msgstr "£±czenie z hostem whois.internic.net."
 +msgstr "£±czenie z whois.publicinterestregistry.net."
  
  #: ../whois.c:202
- #, fuzzy, c-format
-@@ -70,17 +75,17 @@
+-#, fuzzy, c-format
++#, c-format
+ msgid ""
+ "\n"
+ "Found referral to %s.\n"
  "\n"
  msgstr ""
  "\n"
 -"Znaleziono odniesienie z InterNIC do %s.\n"
-+"Znaleziono odniesienie z crsnic do %s.\n"
++"Znaleziono odniesienie do %s.\n"
  "\n"
  
  #: ../whois.c:206
@@ -77,14 +99,14 @@
 +msgstr "Dla tego rodzaju obiektu nie jest znany ¿aden serwer whois."
  
  #: ../whois.c:209
- #, fuzzy
+-#, fuzzy
  msgid "Unknown AS number or IP network. Please upgrade this program."
 -msgstr "Nieznany numer AS. Zainstaluj nowsz± wersjê programu."
 +msgstr "Nieznany numer AS lub sieæ IP. Proszê uaktualniæ ten program."
  
  #: ../whois.c:222
  #, c-format
-@@ -94,12 +99,12 @@
+@@ -94,12 +95,11 @@
  #: ../whois.c:275 ../whois.c:278
  #, c-format
  msgid "Cannot parse this line: %s"
@@ -92,14 +114,14 @@
 +msgstr "Nie mo¿na przeanalizowaæ tej linii: %s"
  
  #: ../whois.c:417
- #, fuzzy
+-#, fuzzy
  msgid "Warning: RIPE flags used with a traditional server."
 -msgstr "Uwaga: flagi RIPE s± ignorowane dla starszych serwerów."
 +msgstr "Uwaga: u¿yto flag RIPE ze starszym serwerem."
  
  #: ../whois.c:477
  #, c-format
-@@ -111,8 +116,8 @@
+@@ -111,8 +111,8 @@
  "Catastrophic error: disclaimer text has been changed.\n"
  "Please upgrade this program.\n"
  msgstr ""
@@ -110,7 +132,7 @@
  
  #: ../whois.c:611
  #, c-format
-@@ -126,12 +131,12 @@
+@@ -126,15 +126,14 @@
  
  #: ../whois.c:633
  msgid "Timeout."
@@ -124,8 +146,35 @@
 +msgstr "Przerwano sygna³em %d..."
  
  #: ../whois.c:688
- #, fuzzy
-@@ -168,64 +173,69 @@
+-#, fuzzy
+ msgid ""
+ "Usage: whois [OPTION]... OBJECT...\n"
+ "\n"
+@@ -142,11 +141,9 @@
+ "-L                     find all Less specific matches\n"
+ "-m                     find first level more specific matches\n"
+ "-M                     find all More specific matches\n"
+-"-c                     find the smallest match containing a mnt-irt "
+-"attribute\n"
++"-c                     find the smallest match containing a mnt-irt attribute\n"
+ "-x                     exact match [RPSL only]\n"
+-"-d                     return DNS reverse delegation objects too [RPSL "
+-"only]\n"
++"-d                     return DNS reverse delegation objects too [RPSL only]\n"
+ "-i ATTR[,ATTR]...      do an inverse lookup for specified ATTRibutes\n"
+ "-T TYPE[,TYPE]...      only look for objects of TYPE\n"
+ "-K                     only primary keys are returned [RPSL only]\n"
+@@ -156,8 +153,7 @@
+ "-a                     search all databases\n"
+ "-s SOURCE[,SOURCE]...  search the database from SOURCE\n"
+ "-g SOURCE:FIRST-LAST   find updates from SOURCE from serial FIRST to LAST\n"
+-"-t TYPE                request template for object of TYPE ('all' for a "
+-"list)\n"
++"-t TYPE                request template for object of TYPE ('all' for a list)\n"
+ "-v TYPE                request verbose template for object of TYPE\n"
+ "-q [version|sources|types]  query specified server info [RPSL only]\n"
+ "-F                     fast raw output (implies -r)\n"
+@@ -168,64 +164,73 @@
  "      --help           display this help and exit\n"
  "      --version        output version information and exit\n"
  msgstr ""
@@ -160,12 +209,14 @@
 +"-i ATR[,ATR]...        wykonanie odwrotnego wyszukiwania ATRybutów\n"
 +"-T TYP[,TYP]...        szukanie tylko obiektów TYP\n"
 +"-K                     zwrócenie tylko podstawowych kluczy [tylko RPSL]\n"
-+"-r                     bez rekursywnego poszukiwania informacji kontaktowych\n""-R                     wymuszenie pokazania lokalnej kopii obiektu domeny nawet\n"
++"-r                     bez rekursywnego poszukiwania informacji kontaktowych\n"
++"-R                     wymuszenie pokazania lokalnej kopii obiektu domeny nawet\n"
 +"                       je¶li zawiera odwo³anie\n"
-+"-a                     przeszukanie wszystkich bazy danych\n"
++"-a                     przeszukanie wszystkich baz danych\n"
 +"-s ¬RÓD£O[,¬RÓD£O]...  przeszukanie bazy danych ze ¬RÓD£A\n"
 +"-g ¬RÓD£O:PIERW.-OST.  szukanie uaktualnieñ ze ¬RÓD£A od numeru PIERW. do OST.\n"
-+"-t TYP                 ¿±danie szablonu dla obiektu TYP ('all' podaje listê)\n""-v TYP                 ¿±danie szczegó³owego szablonu dla obiektu TYP\n"
++"-t TYP                 ¿±danie szablonu dla obiektu TYP ('all' podaje listê)\n"
++"-v TYP                 ¿±danie szczegó³owego szablonu dla obiektu TYP\n"
 +"-q [version|sources|types]  zapytanie serwera o podane informacje [tylko RPSL]\n"
 +"-F                     szybki, surowy wydruk (w³±cza -r)\n"
 +"-h HOST                ³±czenie z serwerem HOST\n"
@@ -186,7 +237,7 @@
 -msgstr ""
 +msgstr "Nieprawid³owy rodzaj skrótu '%s'.\n"
  
--#: ../mkpasswd.c:105
+ #: ../mkpasswd.c:105
  #, c-format
  msgid "Invalid number '%s'.\n"
 -msgstr ""
@@ -198,8 +249,8 @@
 -msgstr ""
 +msgstr "'%s --help' poda wiêcej informacji.\n"
  
--#: ../mkpasswd.c:152
 +# : ../mkpasswd.c:152
+ #: ../mkpasswd.c:152
  #, c-format
  msgid "Wrong salt length: %d byte(s) when %d expected.\n"
 -msgstr ""
@@ -224,7 +275,7 @@
  
  #: ../mkpasswd.c:230
  msgid ""
-@@ -233,6 +243,9 @@
+@@ -233,6 +238,9 @@
  "Crypts the PASSWORD using crypt(3).\n"
  "\n"
  msgstr ""
@@ -234,7 +285,7 @@
  
  #: ../mkpasswd.c:233
  #, c-format
-@@ -251,20 +264,21 @@
+@@ -251,20 +259,20 @@
  "\n"
  "Report bugs to %s.\n"
  msgstr ""
@@ -265,7 +316,7 @@
 -
 -#~ msgid "I guess it's a netblock name but I don't know where to look it up."
 -#~ msgstr "To nazwa bloku sieciowego, ale nie wiem, pod jak± nazw± szukaæ."
-+msgstr "Dostêpne algorytmy:\n"
- 
+-
 -#~ msgid "I guess it's a domain but I don't know where to look it up."
 -#~ msgstr "To nazwa domeny, ale nie wiem, gdzie jej szukaæ."
++msgstr "Dostêpne algorytmy:\n"

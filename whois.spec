@@ -16,15 +16,16 @@ BuildRequires:	perl
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This is a new whois (RFC 954) client rewritten from scratch by me. It
-is derived from and compatible with the usual BSD and RIPE whois(1)
+This is a new whois (RFC 954) client rewritten from scratch. It is
+derived from and compatible with the usual BSD and RIPE whois(1)
 programs. It is intelligent and can automatically select the
 appropriate whois server for most queries.
 
 %description -l pl
-To jest nowy klient us≥ugi whois*RFC 954) napisany ca≥kowicie od nowa.
-Jest kompatybilny zarÛwno z whois z BSD oraz RIPE. Jest inteligentny i
-automatycznie dobiera poprawny serwer whois dla wiÍkszosci zapytaÒ.
+To jest nowy klient us≥ugi whois (RFC 954) napisany ca≥kowicie od
+nowa. Jest kompatybilny zarÛwno z whois z BSD oraz RIPE. Jest
+inteligentny i automatycznie dobiera poprawny serwer whois dla
+wiÍkszosci zapytaÒ.
 
 %description -l ru
 ¸‘œ Œ¡–…”¡ŒŒŸ  ” "Œ’Ã—" ÀÃ…≈Œ‘ (RFC 954), ”œ◊Õ≈”‘…ÕŸ  ” whois(1)
