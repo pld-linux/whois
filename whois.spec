@@ -3,12 +3,12 @@ Summary(pl):	Rozszerzony klient WHOIS
 Summary(ru):	Улучшенный клиент WHOIS
 Summary(uk):	Покращений кл╕╓нт WHOIS
 Name:		whois
-Version:	4.7.6
+Version:	4.7.8
 Release:	2
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.gz
-# Source0-md5:	a8cd09769bafa67a8517244d1068b534
+# Source0-md5:	41cc0635976d6d0b33ba3067ad246b97
 Patch0:		%{name}-Makefile.patch
 URL:		http://www.linux.it/~md/software/
 BuildRequires:	gettext-devel
@@ -40,7 +40,7 @@ wiЙkszosci zapytaЯ.
 вибирати правильний whois сервер в залежност╕ в╕д запиту.
 
 %prep
-%setup -q
+%setup -q -n %{name}-4.7.7
 %patch0 -p1
 
 mv -f po/{no,nb}.po
