@@ -3,13 +3,12 @@ Summary(pl):	Rozszerzony klient WHOIS
 Summary(ru):	Улучшенный клиент WHOIS
 Summary(uk):	Покращений кл╕╓нт WHOIS
 Name:		whois
-Version:	4.7.8
-Release:	2
+Version:	4.7.10
+Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.gz
-# Source0-md5:	41cc0635976d6d0b33ba3067ad246b97
-Patch0:		%{name}-Makefile.patch
+# Source0-md5:	c56c1e5e00c579b023ad5142983fcf4f
 URL:		http://www.linux.it/~md/software/
 BuildRequires:	gettext-devel
 BuildRequires:	libidn-devel
@@ -40,8 +39,7 @@ wiЙkszosci zapytaЯ.
 вибирати правильний whois сервер в залежност╕ в╕д запиту.
 
 %prep
-%setup -q -n %{name}-4.7.7
-%patch0 -p1
+%setup -q
 
 mv -f po/{no,nb}.po
 %{__perl} -pi -e 's/no\.mo/nb.mo/' po/Makefile
@@ -54,12 +52,13 @@ mv -f po/{no,nb}.po
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_sysconfdir}
+install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_bindir},%{_mandir}/man1}
 
 install whois.conf $RPM_BUILD_ROOT%{_sysconfdir}
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	BASEDIR=$RPM_BUILD_ROOT \
+	prefix=%{_prefix}
 
 %find_lang %{name}
 
