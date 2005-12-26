@@ -3,14 +3,13 @@ Summary(pl):	Rozszerzony klient WHOIS
 Summary(ru):	Улучшенный клиент WHOIS
 Summary(uk):	Покращений кл╕╓нт WHOIS
 Name:		whois
-Version:	4.7.6
+Version:	4.7.11
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
 #Source0:	http://www.linux.it/~md/software/%{name}_%{version}.tar.gz
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.gz
-# Source0-md5:	a8cd09769bafa67a8517244d1068b534
-Patch0:		%{name}-Makefile.patch
+# Source0-md5:	aca7ac4c907232f2eea5e7cbb7d6245d
 URL:		http://www.linux.it/~md/software/
 BuildRequires:	gettext-devel
 BuildRequires:	libidn-devel
@@ -41,7 +40,6 @@ wiЙkszosci zapytaЯ.
 
 %prep
 %setup -q
-%patch0 -p1
 
 mv -f po/{no,nb}.po
 %{__perl} -pi -e 's/no\.mo/nb.mo/' po/Makefile
@@ -54,12 +52,13 @@ mv -f po/{no,nb}.po
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_sysconfdir}
+install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_bindir},%{_mandir}/man1}
 
 install whois.conf $RPM_BUILD_ROOT%{_sysconfdir}
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	BASEDIR=$RPM_BUILD_ROOT \
+	prefix=%{_prefix}
 
 %find_lang %{name}
 
