@@ -4,11 +4,12 @@ Summary(ru):	Улучшенный клиент WHOIS
 Summary(uk):	Покращений кл╕╓нт WHOIS
 Name:		whois
 Version:	4.7.14
-Release:	1
+Release:	2
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.gz
 # Source0-md5:	885213bf1b4d85c27ae8fbc583d3e81e
+Patch0:		%{name}-idn.patch
 URL:		http://www.linux.it/~md/software/
 BuildRequires:	gettext-devel
 BuildRequires:	libidn-devel
@@ -40,6 +41,7 @@ wiЙkszosci zapytaЯ.
 
 %prep
 %setup -q
+%patch0 -p1
 
 mv -f po/{no,nb}.po
 %{__perl} -pi -e 's/no\.mo/nb.mo/' po/Makefile
