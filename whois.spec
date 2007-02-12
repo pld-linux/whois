@@ -1,7 +1,7 @@
 Summary:	Enhanced WHOIS client
-Summary(pl.UTF-8):   Rozszerzony klient WHOIS
-Summary(ru.UTF-8):   Улучшенный клиент WHOIS
-Summary(uk.UTF-8):   Покращений клієнт WHOIS
+Summary(pl.UTF-8):	Rozszerzony klient WHOIS
+Summary(ru.UTF-8):	Улучшенный клиент WHOIS
+Summary(uk.UTF-8):	Покращений клієнт WHOIS
 Name:		whois
 Version:	4.7.20
 Release:	1
