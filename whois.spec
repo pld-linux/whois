@@ -1,7 +1,7 @@
 Summary:	Enhanced WHOIS client
-Summary(pl):	Rozszerzony klient WHOIS
-Summary(ru):	Улучшенный клиент WHOIS
-Summary(uk):	Покращений кл╕╓нт WHOIS
+Summary(pl.UTF-8):   Rozszerzony klient WHOIS
+Summary(ru.UTF-8):   пёп╩я┐я┤я┬п╣п╫п╫я▀п╧ п╨п╩п╦п╣п╫я┌ WHOIS
+Summary(uk.UTF-8):   п÷п╬п╨я─п╟я┴п╣п╫п╦п╧ п╨п╩я√я■п╫я┌ WHOIS
 Name:		whois
 Version:	4.7.20
 Release:	1
@@ -23,21 +23,21 @@ derived from and compatible with the usual BSD and RIPE whois(1)
 programs. It is intelligent and can automatically select the
 appropriate whois server for most queries.
 
-%description -l pl
-To jest nowy klient usЁugi whois (RFC 954) napisany caЁkowicie od
-nowa. Jest kompatybilny zarСwno z whois z BSD oraz RIPE. Jest
+%description -l pl.UTF-8
+To jest nowy klient usе┌ugi whois (RFC 954) napisany caе┌kowicie od
+nowa. Jest kompatybilny zarцЁwno z whois z BSD oraz RIPE. Jest
 inteligentny i automatycznie dobiera poprawny serwer whois dla
-wiЙkszosci zapytaЯ.
+wiд≥kszosci zapytaе└.
 
-%description -l ru
-Это написанный с "нуля" клиент (RFC 954), совместимый с whois(1)
-программами BSD и RIPE. В большинстве случаев он может автоматически
-выбирать правильный whois сервер в зависимости от запроса.
+%description -l ru.UTF-8
+п╜я┌п╬ п╫п╟п©п╦я│п╟п╫п╫я▀п╧ я│ "п╫я┐п╩я▐" п╨п╩п╦п╣п╫я┌ (RFC 954), я│п╬п╡п╪п╣я│я┌п╦п╪я▀п╧ я│ whois(1)
+п©я─п╬пЁя─п╟п╪п╪п╟п╪п╦ BSD п╦ RIPE. п▓ п╠п╬п╩я▄я┬п╦п╫я│я┌п╡п╣ я│п╩я┐я┤п╟п╣п╡ п╬п╫ п╪п╬п╤п╣я┌ п╟п╡я┌п╬п╪п╟я┌п╦я┤п╣я│п╨п╦
+п╡я▀п╠п╦я─п╟я┌я▄ п©я─п╟п╡п╦п╩я▄п╫я▀п╧ whois я│п╣я─п╡п╣я─ п╡ п╥п╟п╡п╦я│п╦п╪п╬я│я┌п╦ п╬я┌ п╥п╟п©я─п╬я│п╟.
 
-%description -l uk
-Це заново написаний кл╕╓нт whois (RFC 954), сум╕сний з whois(1)
-програмами BSD та RIPE. В╕н в б╕льшост╕ випадк╕в може автоматично
-вибирати правильний whois сервер в залежност╕ в╕д запиту.
+%description -l uk.UTF-8
+п╕п╣ п╥п╟п╫п╬п╡п╬ п╫п╟п©п╦я│п╟п╫п╦п╧ п╨п╩я√я■п╫я┌ whois (RFC 954), я│я┐п╪я√я│п╫п╦п╧ п╥ whois(1)
+п©я─п╬пЁя─п╟п╪п╟п╪п╦ BSD я┌п╟ RIPE. п▓я√п╫ п╡ п╠я√п╩я▄я┬п╬я│я┌я√ п╡п╦п©п╟п╢п╨я√п╡ п╪п╬п╤п╣ п╟п╡я┌п╬п╪п╟я┌п╦я┤п╫п╬
+п╡п╦п╠п╦я─п╟я┌п╦ п©я─п╟п╡п╦п╩я▄п╫п╦п╧ whois я│п╣я─п╡п╣я─ п╡ п╥п╟п╩п╣п╤п╫п╬я│я┌я√ п╡я√п╢ п╥п╟п©п╦я┌я┐.
 
 %prep
 %setup -q
