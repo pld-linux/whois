@@ -3,12 +3,12 @@ Summary(pl):	Rozszerzony klient WHOIS
 Summary(ru):	Улучшенный клиент WHOIS
 Summary(uk):	Покращений кл╕╓нт WHOIS
 Name:		whois
-Version:	4.7.20
+Version:	4.7.21
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.gz
-# Source0-md5:	81cea7350890d2a4dc974f661be31c7d
+# Source0-md5:	465479682f31f0627ebc4ab3e365b7d2
 Patch0:		%{name}-idn.patch
 URL:		http://www.linux.it/~md/software/
 BuildRequires:	gettext-devel
