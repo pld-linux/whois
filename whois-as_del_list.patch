@@ -1,0 +1,11 @@
+--- whois-4.7.21/as_del_list~	2006-05-16 16:15:50.000000000 +0200
++++ whois-4.7.21/as_del_list	2007-06-27 10:07:27.190589000 +0200
+@@ -59,6 +59,8 @@
+ 37888	38911	apnic
+ 38912	39935	ripe
+ 40960	41983	ripe
++41984	43007	ripe
++43008	44031	ripe
+ 
+ # catch all: everything else comes from ARIN
+ 1	40959	arin
