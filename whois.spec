@@ -4,7 +4,7 @@ Summary(ru.UTF-8):	Улучшенный клиент WHOIS
 Summary(uk.UTF-8):	Покращений клієнт WHOIS
 Name:		whois
 Version:	4.7.21
-Release:	3
+Release:	4
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.gz
@@ -12,6 +12,7 @@ Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.g
 Patch0:		%{name}-idn.patch
 Patch1:		%{name}-pl.po-update.patch
 Patch2:		%{name}-as_del_list.patch
+Patch3:		%{name}-config.patch
 URL:		http://www.linux.it/~md/software/
 BuildRequires:	gettext-devel
 BuildRequires:	libidn-devel
@@ -46,6 +47,7 @@ większosci zapytań.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 mv -f po/{no,nb}.po
 %{__perl} -pi -e 's/no\.mo/nb.mo/' po/Makefile
