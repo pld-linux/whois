@@ -3,16 +3,14 @@ Summary(pl.UTF-8):	Rozszerzony klient WHOIS
 Summary(ru.UTF-8):	Улучшенный клиент WHOIS
 Summary(uk.UTF-8):	Покращений клієнт WHOIS
 Name:		whois
-Version:	4.7.21
-Release:	4
-License:	GPL
+Version:	4.7.22
+Release:	1
+License:	GPL v2
 Group:		Networking/Utilities
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.gz
-# Source0-md5:	465479682f31f0627ebc4ab3e365b7d2
+# Source0-md5:	0e91c899a836be0f0cdc4a8ed5af6479
 Patch0:		%{name}-idn.patch
-Patch1:		%{name}-pl.po-update.patch
-Patch2:		%{name}-as_del_list.patch
-Patch3:		%{name}-config.patch
+Patch1:		%{name}-config.patch
 URL:		http://www.linux.it/~md/software/
 BuildRequires:	gettext-devel
 BuildRequires:	libidn-devel
@@ -46,8 +44,6 @@ większosci zapytań.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
-%patch3 -p1
 
 mv -f po/{no,nb}.po
 %{__perl} -pi -e 's/no\.mo/nb.mo/' po/Makefile
