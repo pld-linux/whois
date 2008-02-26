@@ -1,0 +1,12 @@
+diff -urN whois-4.7.24.org/tld_serv_list whois-4.7.24/tld_serv_list
+--- whois-4.7.24.org/tld_serv_list	2007-10-30 11:06:18.000000000 +0100
++++ whois-4.7.24/tld_serv_list	2008-02-26 13:00:11.757594907 +0100
+@@ -41,7 +41,7 @@
+ .arpa	whois.iana.org
+ 
+ .aero	whois.information.aero
+-.asia	whois.nic.asia
++.asia	whois.dotasia.org
+ .biz	whois.nic.biz
+ .cat	whois.cat
+ .coop	whois.nic.coop
