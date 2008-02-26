@@ -6,7 +6,7 @@ diff -urN whois-4.7.24.org/tld_serv_list whois-4.7.24/tld_serv_list
  
  .aero	whois.information.aero
 -.asia	whois.nic.asia
-+.asia	whois.dotasia.org
++.asia	whois.dotasia.net
  .biz	whois.nic.biz
  .cat	whois.cat
  .coop	whois.nic.coop
