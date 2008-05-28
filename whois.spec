@@ -3,15 +3,16 @@ Summary(pl.UTF-8):	Rozszerzony klient WHOIS
 Summary(ru.UTF-8):	Улучшенный клиент WHOIS
 Summary(uk.UTF-8):	Покращений клієнт WHOIS
 Name:		whois
-Version:	4.7.24
-Release:	2
+Version:	4.7.26
+Release:	1
 License:	GPL v2
 Group:		Networking/Utilities
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.gz
-# Source0-md5:	479ebc79d1e8189e16ab51b4d8981529
+# Source0-md5:	f069304ae912ff4fdec59f33de405076
 Patch0:		%{name}-idn.patch
 Patch1:		%{name}-config.patch
 Patch2:		%{name}-srv.patch
+Patch3:		%{name}-pl.po-update.patch
 URL:		http://www.linux.it/~md/software/
 BuildRequires:	gettext-devel
 BuildRequires:	libidn-devel
@@ -46,6 +47,7 @@ większosci zapytań.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 mv -f po/{no,nb}.po
 %{__perl} -pi -e 's/no\.mo/nb.mo/' po/Makefile
@@ -74,6 +76,6 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc README debian/changelog
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/whois
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/whois.conf
-%{_mandir}/man1/*
+%{_mandir}/man1/whois.1*
