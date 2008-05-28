@@ -1,7 +1,6 @@
-diff -urN whois-4.7.21.org/config.h whois-4.7.21/config.h
---- whois-4.7.21.org/config.h	2007-04-02 04:26:39.000000000 +0200
-+++ whois-4.7.21/config.h	2007-07-16 22:16:20.172152166 +0200
-@@ -11,44 +11,19 @@
+--- whois-4.7.26/config.h.orig	2008-04-06 17:26:42.000000000 +0200
++++ whois-4.7.26/config.h	2008-05-28 19:43:05.926705891 +0200
+@@ -11,47 +11,20 @@
  #define DEFAULTSERVER   "whois.arin.net"
  
  /* Configuration file */
@@ -18,7 +17,7 @@ diff -urN whois-4.7.21.org/config.h whois-4.7.21/config.h
 -/* which versions? */
  # define HAVE_GETOPT_LONG
  # define HAVE_GETADDRINFO
- # define ENABLE_NLS
+-# define ENABLE_NLS
 -# define LOCALEDIR "/usr/local/share/locale"
 -#endif
 -
@@ -34,8 +33,11 @@ diff -urN whois-4.7.21.org/config.h whois-4.7.21/config.h
 -# if __GLIBC__ >= 2 && __GLIBC_MINOR__ >= 1
 -#  define HAVE_GETADDRINFO
 -# endif
+-# if __GLIBC__ >= 2 && __GLIBC_MINOR__ >= 7
+ #  define HAVE_SHA_CRYPT
+-# endif
 -#endif
--
+ 
 -/* Linux, Solaris 5, FreeBSD 5.x. What else? */
 -#if defined _POSIX_VERSION && _POSIX_VERSION >= 200112L
  # define HAVE_WORDEXP

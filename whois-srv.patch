@@ -1,10 +1,9 @@
-diff -urN whois-4.7.24.org/tld_serv_list whois-4.7.24/tld_serv_list
---- whois-4.7.24.org/tld_serv_list	2007-10-30 11:06:18.000000000 +0100
-+++ whois-4.7.24/tld_serv_list	2008-02-26 13:00:11.757594907 +0100
-@@ -41,7 +41,7 @@
+--- whois-4.7.26/tld_serv_list.orig	2008-04-06 20:01:08.000000000 +0200
++++ whois-4.7.26/tld_serv_list	2008-05-28 19:46:12.777350550 +0200
+@@ -39,7 +39,7 @@
  .arpa	whois.iana.org
  
- .aero	whois.information.aero
+ .aero	WEB http://www.nic.aero/
 -.asia	whois.nic.asia
 +.asia	whois.dotasia.net
  .biz	whois.nic.biz
