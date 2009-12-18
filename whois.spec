@@ -4,7 +4,7 @@ Summary(ru.UTF-8):	Улучшенный клиент WHOIS
 Summary(uk.UTF-8):	Покращений клієнт WHOIS
 Name:		whois
 Version:	4.7.37
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Networking/Utilities
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.gz
@@ -68,6 +68,8 @@ install whois.conf $RPM_BUILD_ROOT%{_sysconfdir}
 %{__make} install install-pos \
 	BASEDIR=$RPM_BUILD_ROOT \
 	prefix=%{_prefix}
+
+rm -r $RPM_BUILD_ROOT%{_datadir}/locale/zh_CN.po
 
 %find_lang %{name}
 
