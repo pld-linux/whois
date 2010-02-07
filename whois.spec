@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Rozszerzony klient WHOIS
 Summary(ru.UTF-8):	Улучшенный клиент WHOIS
 Summary(uk.UTF-8):	Покращений клієнт WHOIS
 Name:		whois
-Version:	5.0.0
+Version:	5.0.1
 Release:	1
 License:	GPL v2
 Group:		Networking/Utilities
