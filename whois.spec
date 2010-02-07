@@ -69,8 +69,6 @@ install whois.conf $RPM_BUILD_ROOT%{_sysconfdir}
 	BASEDIR=$RPM_BUILD_ROOT \
 	prefix=%{_prefix}
 
-rm -r $RPM_BUILD_ROOT%{_datadir}/locale/zh_CN.po
-
 %find_lang %{name}
 
 %clean
