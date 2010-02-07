@@ -8,7 +8,7 @@ Release:	1
 License:	GPL v2
 Group:		Networking/Utilities
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.gz
-# Source0-md5:	18d74a07d711262b75f04a1c319bc833
+# Source0-md5:	bf3d9675e754419ed964360397689c83
 Patch0:		%{name}-idn.patch
 Patch1:		%{name}-config.patch
 URL:		http://www.linux.it/~md/software/
