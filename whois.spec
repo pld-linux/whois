@@ -7,12 +7,12 @@ Summary(pl.UTF-8):	Rozszerzony klient WHOIS
 Summary(ru.UTF-8):	Улучшенный клиент WHOIS
 Summary(uk.UTF-8):	Покращений клієнт WHOIS
 Name:		whois
-Version:	5.0.14
+Version:	5.0.20
 Release:	1
 License:	GPL v2
 Group:		Networking/Utilities
-Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.gz
-# Source0-md5:	82c4c93ea589ce1dad1cb02ef04c08b9
+Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.xz
+# Source0-md5:	2e33c03536082ae8156b2cbe78c0299d
 Patch0:		%{name}-idn.patch
 Patch1:		%{name}-config.patch
 Patch2:		%{name}-pl.po-update.patch
@@ -20,6 +20,8 @@ URL:		http://www.linux.it/~md/software/
 BuildRequires:	gettext-devel
 BuildRequires:	libidn-devel
 BuildRequires:	perl-base
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 Obsoletes:	inetutils-whois
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
