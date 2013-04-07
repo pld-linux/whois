@@ -1,18 +1,19 @@
 # TODO
 # - Why does whois provide something called mkpasswd (also provided by expect)
 #   and should we rm it durring %install with a note as to why we aren't using it?
+#   - "because of historical reasons" (quoting README)
 #
 Summary:	Enhanced WHOIS client
 Summary(pl.UTF-8):	Rozszerzony klient WHOIS
 Summary(ru.UTF-8):	Улучшенный клиент WHOIS
 Summary(uk.UTF-8):	Покращений клієнт WHOIS
 Name:		whois
-Version:	5.0.20
+Version:	5.0.22
 Release:	1
-License:	GPL v2
+License:	GPL v2+
 Group:		Networking/Utilities
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.xz
-# Source0-md5:	2e33c03536082ae8156b2cbe78c0299d
+# Source0-md5:	b9879010d925d5300f79b3db4a138a14
 Patch0:		%{name}-idn.patch
 Patch1:		%{name}-config.patch
 Patch2:		%{name}-pl.po-update.patch
