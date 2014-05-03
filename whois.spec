@@ -8,12 +8,12 @@ Summary(pl.UTF-8):	Rozszerzony klient WHOIS
 Summary(ru.UTF-8):	Улучшенный клиент WHOIS
 Summary(uk.UTF-8):	Покращений клієнт WHOIS
 Name:		whois
-Version:	5.1.1
+Version:	5.1.2
 Release:	1
 License:	GPL v2+
 Group:		Networking/Utilities
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.xz
-# Source0-md5:	aa4561134a03e22e2d759748ca676a97
+# Source0-md5:	a103596a4da3f1795fccbd9432c59ec9
 Patch0:		%{name}-idn.patch
 Patch1:		%{name}-config.patch
 URL:		http://www.linux.it/~md/software/
@@ -51,9 +51,6 @@ większosci zapytań.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-
-mv -f po/{no,nb}.po
-%{__perl} -pi -e 's/no\.mo/nb.mo/' po/Makefile
 
 # Makefile vs po/Makefile mismatch
 echo 'install-pos: install' >> po/Makefile
