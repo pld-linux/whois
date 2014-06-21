@@ -8,12 +8,12 @@ Summary(pl.UTF-8):	Rozszerzony klient WHOIS
 Summary(ru.UTF-8):	Улучшенный клиент WHOIS
 Summary(uk.UTF-8):	Покращений клієнт WHOIS
 Name:		whois
-Version:	5.1.2
+Version:	5.1.3
 Release:	1
 License:	GPL v2+
 Group:		Networking/Utilities
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.xz
-# Source0-md5:	a103596a4da3f1795fccbd9432c59ec9
+# Source0-md5:	2817d6065bbd8f274a3e5240e0bf7dd5
 Patch0:		%{name}-idn.patch
 Patch1:		%{name}-config.patch
 URL:		http://www.linux.it/~md/software/
@@ -72,6 +72,8 @@ install whois.conf $RPM_BUILD_ROOT%{_sysconfdir}
 %{__make} install install-pos \
 	BASEDIR=$RPM_BUILD_ROOT \
 	prefix=%{_prefix}
+
+%{__rm} $RPM_BUILD_ROOT{%{_bindir}/mkpasswd,%{_mandir}/man1/mkpasswd.1}
 
 %find_lang %{name}
 
