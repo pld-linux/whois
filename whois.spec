@@ -17,7 +17,7 @@ Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.x
 Patch0:		%{name}-idn.patch
 Patch1:		%{name}-config.patch
 URL:		http://www.linux.it/~md/software/
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	libidn-devel
 BuildRequires:	perl-base
 BuildRequires:	tar >= 1:1.22
