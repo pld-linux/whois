@@ -1,8 +1,3 @@
-# TODO
-# - Why does whois provide something called mkpasswd (also provided by expect)
-#   and should we rm it during %install with a note as to why we aren't using it?
-#   - "because of historical reasons" (quoting README)
-#
 Summary:	Enhanced WHOIS client
 Summary(pl.UTF-8):	Rozszerzony klient WHOIS
 Summary(ru.UTF-8):	Улучшенный клиент WHOIS
@@ -66,14 +61,11 @@ echo 'install-pos: install' >> po/Makefile
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_bindir},%{_mandir}/man1}
-
-install whois.conf $RPM_BUILD_ROOT%{_sysconfdir}
-
 %{__make} install-whois install-pos \
 	BASEDIR=$RPM_BUILD_ROOT \
 	prefix=%{_prefix}
 
-%{__rm} $RPM_BUILD_ROOT{%{_bindir}/mkpasswd,%{_mandir}/man1/mkpasswd.1}
+cp -p whois.conf $RPM_BUILD_ROOT%{_sysconfdir}
 
 %find_lang %{name}
 
