@@ -4,7 +4,7 @@ Summary(ru.UTF-8):	Улучшенный клиент WHOIS
 Summary(uk.UTF-8):	Покращений клієнт WHOIS
 Name:		whois
 Version:	5.2.12
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Networking/Utilities
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.xz
@@ -54,7 +54,8 @@ echo 'install-pos: install' >> po/Makefile
 %{__make} \
 	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags} %{rpmcppflags}" \
-	HAVE_LIBIDN=1
+	HAVE_LIBIDN=1 \
+	HAVE_ICONV=1
 
 %{__make} -C po
 
