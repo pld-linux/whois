@@ -1,15 +1,21 @@
---- whois-4.7.27/config.h.orig	2008-07-17 00:47:45.000000000 +0200
-+++ whois-4.7.27/config.h	2008-08-21 20:06:55.866578803 +0200
-@@ -10,15 +10,11 @@
+--- whois-5.2.15/config.h.orig	2017-03-03 19:45:44.903795045 +0100
++++ whois-5.2.15/config.h	2017-03-03 19:46:00.393795044 +0100
+@@ -7,9 +7,9 @@
  #define DEFAULTSERVER   "whois.arin.net"
  
  /* Configuration file */
 -/*
++
  #define CONFIG_FILE "/etc/whois.conf"
 -*/
++
  
  
  /* autoconf in cpp macros */
+@@ -17,9 +17,7 @@
+ # include <sys/param.h>
+ #endif
+ 
 -#ifdef linux
  # define ENABLE_NLS
 -#endif
