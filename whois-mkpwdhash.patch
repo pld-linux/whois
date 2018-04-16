@@ -1,0 +1,53 @@
+diff -ur whois-5.3.0.orig/Makefile whois-5.3.0/Makefile
+--- whois-5.3.0.orig/Makefile	2018-01-21 00:23:45.000000000 +0000
++++ whois-5.3.0/Makefile	2018-04-16 16:50:58.932233643 +0000
+@@ -127,8 +127,8 @@
+ install-mkpasswd: mkpasswd
+ 	$(INSTALL) -d $(BASEDIR)$(prefix)/bin/
+ 	$(INSTALL) -d $(BASEDIR)$(prefix)/share/man/man1/
+-	$(INSTALL) -m 0755 mkpasswd $(BASEDIR)$(prefix)/bin/
+-	$(INSTALL) -m 0644 mkpasswd.1 $(BASEDIR)$(prefix)/share/man/man1/
++	$(INSTALL) -m 0755 mkpasswd $(BASEDIR)$(prefix)/bin/mkpwdhash
++	$(INSTALL) -m 0644 mkpasswd.1 $(BASEDIR)$(prefix)/share/man/man1/mkpwdhash.1
+ 
+ install-pos:
+ 	cd po && $(MAKE) install
+diff -ur whois-5.3.0.orig/mkpasswd.1 whois-5.3.0/mkpasswd.1
+--- whois-5.3.0.orig/mkpasswd.1	2013-03-30 01:31:39.000000000 +0000
++++ whois-5.3.0/mkpasswd.1	2018-04-16 16:51:17.853233430 +0000
+@@ -1,13 +1,13 @@
+-.TH MKPASSWD 1 "21 March 2008" "Marco d'Itri" "Debian GNU/Linux"
++.TH mkpwdhash 1 "21 March 2008" "Marco d'Itri" "Debian GNU/Linux"
+ .SH NAME
+-mkpasswd \- Overfeatured front end to crypt(3)
++mkpwdhash \- Overfeatured front end to crypt(3)
+ .SH SYNOPSIS
+-.B mkpasswd
++.B mkpwdhash
+ .BR PASSWORD
+ .BR SALT
+ .PP
+ .SH DESCRIPTION
+-.B mkpasswd
++.B mkpwdhash
+ encrypts the given password with the
+ .BR crypt(3)
+ libc function using the given salt.
+@@ -37,7 +37,7 @@
+ .B -s, --stdin
+ Like \fI--password-fd=0\fP.
+ .SH "ENVIRONMENT"
+-.IP "MKPASSWD_OPTIONS"
++.IP "mkpwdhash_OPTIONS"
+ A list of options which will be evalued before the ones specified on the
+ command line.
+ .SH BUGS
+@@ -51,7 +51,7 @@
+ .IR crypt(3),
+ .IR getpass(3)
+ .SH AUTHOR
+-.B mkpasswd
++.B mkpwdhash
+ and this man page were written by Marco d'Itri <\fImd@linux.it\fP>
+ and are licensed under the terms of the GNU General Public License,
+ version 2 or higher.
