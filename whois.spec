@@ -14,10 +14,11 @@ Patch1:		%{name}-config.patch
 Patch2:		%{name}-mkpwdhash.patch
 URL:		https://github.com/rfc1036/whois
 BuildRequires:	gettext-tools
-BuildRequires:	libidn2-devel
+BuildRequires:	libidn2-devel >= 2.0.3
 BuildRequires:	perl-base
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
+Requires:	libidn2 >= 2.0.3
 Obsoletes:	inetutils-whois
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
