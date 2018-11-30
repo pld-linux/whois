@@ -15,6 +15,7 @@ Patch2:		%{name}-mkpwdhash.patch
 URL:		https://github.com/rfc1036/whois
 BuildRequires:	gettext-tools
 BuildRequires:	libidn2-devel >= 2.0.3
+BuildRequires:	libxcrypt-devel >= 4.1
 BuildRequires:	perl-base
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
