@@ -12,6 +12,7 @@ Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.x
 Patch0:		%{name}-idn.patch
 Patch1:		%{name}-config.patch
 Patch2:		%{name}-mkpwdhash.patch
+Patch3:		%{name}-pl.po-update.patch
 URL:		https://github.com/rfc1036/whois
 BuildRequires:	gettext-tools
 BuildRequires:	libidn2-devel >= 2.0.3
@@ -50,6 +51,7 @@ większosci zapytań.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 # Makefile vs po/Makefile mismatch
 echo 'install-pos: install' >> po/Makefile
