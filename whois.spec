@@ -3,12 +3,12 @@ Summary(pl.UTF-8):	Rozszerzony klient WHOIS
 Summary(ru.UTF-8):	Улучшенный клиент WHOIS
 Summary(uk.UTF-8):	Покращений клієнт WHOIS
 Name:		whois
-Version:	5.4.0
+Version:	5.4.1
 Release:	1
 License:	GPL v2+
 Group:		Networking/Utilities
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.xz
-# Source0-md5:	90b97c2431d3fcfc48041264a8c5c6cf
+# Source0-md5:	eb7c6a452160dc5261ab75d06d0783d9
 Patch0:		%{name}-idn.patch
 Patch1:		%{name}-config.patch
 Patch2:		%{name}-mkpwdhash.patch
