@@ -1,8 +1,9 @@
---- whois-4.7.32/whois.c~	2009-03-17 13:14:25.938965061 +0100
-+++ whois-4.7.32/whois.c	2009-03-17 13:15:54.058956261 +0100
-@@ -786,8 +786,12 @@
-     hints.ai_socktype = SOCK_STREAM;
-     hints.ai_flags = AI_ADDRCONFIG | AI_IDN;
+diff -urNp -x '*.orig' whois.org/whois.c whois/whois.c
+--- whois.org/whois.c	2019-12-31 12:14:30.000000000 +0100
++++ whois/whois.c	2021-11-16 22:11:57.631795697 +0100
+@@ -1001,8 +1001,12 @@ int openconn(const char *server, const c
+     hints.ai_flags = AI_ADDRCONFIG;
+     hints.ai_flags |= AI_IDN;
  
 -    if ((err = getaddrinfo(server, port ? port : "nicname", &hints, &res))
 -	    != 0) {
