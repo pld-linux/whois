@@ -3,12 +3,12 @@ Summary(pl.UTF-8):	Rozszerzony klient WHOIS
 Summary(ru.UTF-8):	Улучшенный клиент WHOIS
 Summary(uk.UTF-8):	Покращений клієнт WHOIS
 Name:		whois
-Version:	5.5.6
-Release:	2
+Version:	5.5.10
+Release:	1
 License:	GPL v2+
 Group:		Networking/Utilities
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.xz
-# Source0-md5:	837c1419d713e3066303d85c6984bf24
+# Source0-md5:	4db48a482a06261ffa358d9f52c9bd7e
 Patch0:		%{name}-idn.patch
 Patch1:		%{name}-config.patch
 Patch2:		%{name}-mkpwdhash.patch
@@ -18,6 +18,7 @@ BuildRequires:	gettext-tools
 BuildRequires:	libidn2-devel >= 2.0.3
 BuildRequires:	libxcrypt-devel >= 4.1
 BuildRequires:	perl-base
+BuildRequires:	pkgconfig
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	libidn2 >= 2.0.3
