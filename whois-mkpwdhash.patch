@@ -1,7 +1,6 @@
-diff -ur whois-5.3.0.orig/Makefile whois-5.3.0/Makefile
---- whois-5.3.0.orig/Makefile	2018-01-21 00:23:45.000000000 +0000
-+++ whois-5.3.0/Makefile	2018-04-16 16:50:58.932233643 +0000
-@@ -127,8 +127,8 @@
+--- whois-5.5.18/Makefile.orig	2023-07-22 17:56:56.000000000 +0200
++++ whois-5.5.18/Makefile	2023-10-05 21:31:00.451699851 +0200
+@@ -137,15 +137,15 @@ install-whois: whois
  install-mkpasswd: mkpasswd
  	$(INSTALL) -d $(BASEDIR)$(prefix)/bin/
  	$(INSTALL) -d $(BASEDIR)$(prefix)/share/man/man1/
@@ -12,6 +11,14 @@ diff -ur whois-5.3.0.orig/Makefile whois-5.3.0/Makefile
  
  install-pos:
  	cd po && $(MAKE) install
+ 
+ install-bashcomp:
+ 	$(INSTALL) -d $(BASEDIR)$(BASHCOMPDIR)
+-	$(INSTALL) -m 0644 mkpasswd.bash $(BASEDIR)$(BASHCOMPDIR)/mkpasswd
++	$(INSTALL) -m 0644 mkpasswd.bash $(BASEDIR)$(BASHCOMPDIR)/mkpwdhash
+ 	$(INSTALL) -m 0644 whois.bash $(BASEDIR)$(BASHCOMPDIR)/whois
+ 
+ distclean: clean
 diff -ur whois-5.3.0.orig/mkpasswd.1 whois-5.3.0/mkpasswd.1
 --- whois-5.3.0.orig/mkpasswd.1	2013-03-30 01:31:39.000000000 +0000
 +++ whois-5.3.0/mkpasswd.1	2018-04-16 16:51:17.853233430 +0000
@@ -41,3 +48,17 @@ diff -ur whois-5.3.0.orig/mkpasswd.1 whois-5.3.0/mkpasswd.1
  .RI < md@linux.it >
  and are licensed under the terms of the GNU General Public License,
 
+--- whois-5.5.18/mkpasswd.bash.orig	2023-02-28 01:11:47.000000000 +0100
++++ whois-5.5.18/mkpasswd.bash	2023-10-05 21:30:19.288589517 +0200
+@@ -1,4 +1,4 @@
+-_mkpasswd() {
++_mkpwdhash() {
+ 
+ 	case $3 in
+ 	--help | --version | --salt | --rounds | --password-fd | -[hVSRP])
+@@ -30,4 +30,4 @@ _mkpasswd() {
+ 		return 0
+ 	fi
+ 
+-} && complete -F _mkpasswd mkpasswd
++} && complete -F _mkpwdhash mkpwdhash

@@ -4,7 +4,7 @@ Summary(ru.UTF-8):	Улучшенный клиент WHOIS
 Summary(uk.UTF-8):	Покращений клієнт WHOIS
 Name:		whois
 Version:	5.5.18
-Release:	1
+Release:	2
 License:	GPL v1+
 Group:		Networking/Utilities
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.xz
@@ -52,7 +52,7 @@ większosci zapytań.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
-#%patch3 -p1
+%patch3 -p1
 
 # Makefile vs po/Makefile mismatch
 echo 'install-pos: install' >> po/Makefile
@@ -68,6 +68,7 @@ echo 'install-pos: install' >> po/Makefile
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_bindir},%{_mandir}/man1}
+
 %{__make} install install-pos \
 	BASEDIR=$RPM_BUILD_ROOT \
 	prefix=%{_prefix}
@@ -85,6 +86,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/mkpwdhash
 %attr(755,root,root) %{_bindir}/whois
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/whois.conf
+%{bash_compdir}/mkpwdhash
+%{bash_compdir}/whois
 %{_mandir}/man1/mkpwdhash.1*
 %{_mandir}/man1/whois.1*
 %{_mandir}/man5/whois.conf.5*
