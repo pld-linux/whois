@@ -3,12 +3,12 @@ Summary(pl.UTF-8):	Rozszerzony klient WHOIS
 Summary(ru.UTF-8):	Улучшенный клиент WHOIS
 Summary(uk.UTF-8):	Покращений клієнт WHOIS
 Name:		whois
-Version:	5.5.10
-Release:	2
-License:	GPL v2+
+Version:	5.5.18
+Release:	1
+License:	GPL v1+
 Group:		Networking/Utilities
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.xz
-# Source0-md5:	4db48a482a06261ffa358d9f52c9bd7e
+# Source0-md5:	be8aaa843a0030f656b0ac3ed945e4e6
 Patch0:		%{name}-idn.patch
 Patch1:		%{name}-config.patch
 Patch2:		%{name}-mkpwdhash.patch
@@ -48,7 +48,7 @@ większosci zapytań.
 вибирати правильний whois сервер в залежності від запиту.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1

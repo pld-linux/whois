@@ -12,13 +12,4 @@
  
  
  /* autoconf in cpp macros */
-@@ -17,9 +17,7 @@
- # include <sys/param.h>
- #endif
- 
--#ifdef __GLIBC__
- # define ENABLE_NLS
--#endif
- 
- #ifdef __FreeBSD__
- /* which versions? */
+
