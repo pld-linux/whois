@@ -3,16 +3,15 @@ Summary(pl.UTF-8):	Rozszerzony klient WHOIS
 Summary(ru.UTF-8):	Улучшенный клиент WHOIS
 Summary(uk.UTF-8):	Покращений клієнт WHOIS
 Name:		whois
-Version:	5.5.19
+Version:	5.5.22
 Release:	1
 License:	GPL v1+
 Group:		Networking/Utilities
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.xz
-# Source0-md5:	e719aef49e4ca3ff959fe4e18c3dd4a2
+# Source0-md5:	181d830358a9942dd4ad9cd82d1b1c29
 Patch0:		%{name}-idn.patch
 Patch1:		%{name}-config.patch
 Patch2:		%{name}-mkpwdhash.patch
-Patch3:		%{name}-gcc.patch
 URL:		https://github.com/rfc1036/whois
 BuildRequires:	gettext-tools
 BuildRequires:	libidn2-devel >= 2.0.3
@@ -48,11 +47,10 @@ większosci zapytań.
 вибирати правильний whois сервер в залежності від запиту.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
-%patch3 -p1
 
 # Makefile vs po/Makefile mismatch
 echo 'install-pos: install' >> po/Makefile
