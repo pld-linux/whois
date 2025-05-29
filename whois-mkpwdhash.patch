@@ -19,9 +19,8 @@
  	$(INSTALL) -m 0644 whois.bash $(BASEDIR)$(BASHCOMPDIR)/whois
  
  distclean: clean
-diff -ur whois-5.3.0.orig/mkpasswd.1 whois-5.3.0/mkpasswd.1
---- whois-5.3.0.orig/mkpasswd.1	2013-03-30 01:31:39.000000000 +0000
-+++ whois-5.3.0/mkpasswd.1	2018-04-16 16:51:17.853233430 +0000
+--- whois/mkpasswd.1.orig	2025-05-05 02:59:19.000000000 +0200
++++ whois/mkpasswd.1	2025-05-29 19:51:33.104966167 +0200
 @@ -1,12 +1,12 @@
  .TH MKPASSWD 1 "2019-12-30" "Marco d'Itri" "Debian GNU/Linux"
  .SH NAME
@@ -38,16 +37,15 @@ diff -ur whois-5.3.0.orig/mkpasswd.1 whois-5.3.0/mkpasswd.1
  encrypts the given password with the
  .BR crypt (3)
  libc function, using the given salt.
-@@ -86,7 +86,7 @@ This programs suffers of a bad case of f
- .IR crypt_gensalt (3),
- .IR getpass (3).
+@@ -84,7 +84,7 @@ This program suffers of a bad case of fe
+ .BR crypt_gensalt (3),
+ .BR getpass (3).
  .SH AUTHOR
 -.B mkpasswd
 +.B mkpwdhash
  and this man page were written by Marco d'Itri
  .RI < md@linux.it >
  and are licensed under the terms of the GNU General Public License,
-
 --- whois-5.5.18/mkpasswd.bash.orig	2023-02-28 01:11:47.000000000 +0100
 +++ whois-5.5.18/mkpasswd.bash	2023-10-05 21:30:19.288589517 +0200
 @@ -1,4 +1,4 @@
