@@ -3,12 +3,12 @@ Summary(pl.UTF-8):	Rozszerzony klient WHOIS
 Summary(ru.UTF-8):	Улучшенный клиент WHOIS
 Summary(uk.UTF-8):	Покращений клієнт WHOIS
 Name:		whois
-Version:	5.6.2
+Version:	5.6.4
 Release:	1
 License:	GPL v1+
 Group:		Networking/Utilities
 Source0:	http://ftp.debian.org/debian/pool/main/w/whois/%{name}_%{version}.tar.xz
-# Source0-md5:	377adc8d6236f962daef0919a7535e14
+# Source0-md5:	d8eed2686ec8244090165e180d24df04
 Patch0:		%{name}-idn.patch
 Patch1:		%{name}-config.patch
 Patch2:		%{name}-mkpwdhash.patch
@@ -47,28 +47,29 @@ większosci zapytań.
 вибирати правильний whois сервер в залежності від запиту.
 
 %prep
-%setup -q -n %{name}
+%setup -q -c
+cd work
 %patch -P0 -p1
 %patch -P1 -p1
 %patch -P2 -p1
 
 %build
-%{__make} \
+%{__make} -C work \
 	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags} %{rpmcppflags}" \
 	HAVE_ICONV=1
 
-%{__make} -C po
+%{__make} -C work/po
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_bindir},%{_mandir}/man1}
 
-%{__make} install install-pos \
+%{__make} -C work install install-pos \
 	BASEDIR=$RPM_BUILD_ROOT \
 	prefix=%{_prefix}
 
-%{__cp} -p whois.conf $RPM_BUILD_ROOT%{_sysconfdir}
+%{__cp} -p work/whois.conf $RPM_BUILD_ROOT%{_sysconfdir}
 
 %find_lang %{name}
 
@@ -77,7 +78,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc README debian/changelog
+%doc work/{README,debian/changelog}
 %attr(755,root,root) %{_bindir}/mkpwdhash
 %attr(755,root,root) %{_bindir}/whois
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/whois.conf
